@@ -20,7 +20,7 @@
 	<meta name="twitter:card" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	
+<!-- 	
 	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Roboto:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Roboto:400,300,700" rel='stylesheet' type='text/css'>
@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
 	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
-	<script src="{% static 'js/modernizr-2.6.2.min.js"></script>
+	<script src="{% static 'js/modernizr-2.6.2.min.js"></script> -->
 	
 	</head>
 	<body>
@@ -56,6 +56,7 @@
 	<div class="container-fluid">
 		<div class="row fh5co-post-entry single-entry">
 		{% for auth,title,image,date,desc,cont in datas %}
+		{% if title != None and auth != None and image != None%}
 		<center>
 			<article align="center" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
 				<figure class="animate-box">
@@ -75,6 +76,7 @@
 						</div>
 				</div>
 			</center>
+			{% endif %}
 	    {% endfor %}
 					
 	<!-- jQuery -->
