@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include,re_path
 from django.conf import settings
-
+from main import views
 urlpatterns = [
-    path('',include("main.urls")),
+    path("elaborate/<str:title>",views.elab),
+    path("",views.index),
     path('admin/', admin.site.urls),
 ]
