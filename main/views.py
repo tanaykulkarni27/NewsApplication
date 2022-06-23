@@ -27,7 +27,7 @@ def index(request):
          temp.append(i.get("author"))
          temp.append(i.get("title"))
          temp.append(i.get("urlToImage"))
-         temp.append(i.get("publishedAt"))
+         temp.append(i.get("publishedAt"))=
          data_list.append(temp)
     return render(request,'index.html',{"obj":data,"content":data_list})
 '''
