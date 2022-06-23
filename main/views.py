@@ -2,6 +2,7 @@ from django.shortcuts import render,HttpResponse
 import requests
 __Data = None
 def elab(request,title):
+    global __Data
     # json_obj = requests.get("https://newsapi.org/v2/everything?q=bitcoin&apiKey=6eeec874600546b4be9d3b37d6697ab8")
     # data = json_obj.json().get("articles")
     for i in __Data:
