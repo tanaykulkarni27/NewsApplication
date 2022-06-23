@@ -47,7 +47,6 @@
 		<div class="row fh5co-post-entry">
 		<!-- Run For loop From Here -->
 		{% for atuh,title,image,date in content %}
-			{% if title != None %}
 			<article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
 				<figure>
 					<a href="/elaborate/{{title}}"><img src="{{image}}" alt="Image" class="img-responsive"></a>
@@ -56,7 +55,7 @@
 				<h2 class="fh5co-article-title"><a href="/elaborate/{{title}}">{{title}}</a></h2>
 				<span class="fh5co-meta fh5co-date">PUBLISHED ON : {{date}}</span>
 			</article>
-			{% endif %}
+			
 		{% endfor %}
 			<!-- End For loop From Here -->		
 			<div class="clearfix visible-xs-block"></div>
